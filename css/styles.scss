@@ -14,4 +14,17 @@ body{
 
 }
 
+$paddingDefault: 20px;
+.padding{
+  padding: $paddingDefault;
+
+  &Double{
+    Padding: $paddingDefault * 2;
+  }
+
+  &Half{
+    padding: $paddingDefault / 2;
+  }
+}
+
 @import "../node_modules/bootstrap/scss/bootstrap";
