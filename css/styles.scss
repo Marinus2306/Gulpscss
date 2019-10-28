@@ -1,16 +1,8 @@
-//imports
-@import "../node_modules/bootstrap/scss/bootstrap";
-
-//variables
-$primary: #FF0;
-
-//mixing
-
-
-
-
-
-
+$bgColor: #FF0;
+$text: #333333;
+$fontSz: 1rem;
+$padding: 0;
+$primaryColor: #ff0500;
 
 
 
@@ -22,3 +14,4 @@ body{
 
 }
 
+@import "../node_modules/bootstrap/scss/bootstrap";
