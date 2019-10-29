@@ -7,11 +7,16 @@ $paddingDefault: 0.5rem;
 $fontstyle: helvetica;
 $shadows: text-shadow 2px 2px #ff0000;
 $fontSz: font-size 80px;
+$phone: "screen and (min-width: 576px)";
+$largePhone: "screen and (min-width: 766px)";
+$tablet: "screen and (min-width: 996px)";
+$laptop: "screen and (min-width: 1500px)";
+$desktop: "screen and (min-width: 2000px)";
+$largeDesktop: "screen and (min-width: 2550px)";
 
 @mixin blurText($blur: 5px){
   color: transparent;
   text-shadow: 0 0 $blur, rgba(0,0,0,0.5);
-
 }
 
 @mixin bgColor(){
@@ -66,9 +71,84 @@ body{
 
 }
 
-#card-body{
-
-
-
+@media #{$phone} {
+  h1{
+    padding-left: $paddingDefault * 2;
+  }
 }
+
+@media #{$largePhone} {
+  a{
+    padding-left: $paddingDefault * 3;
+  }
+
+  .container {
+    margin: 15vh auto;
+
+    .card p{
+      margin: 4rem auto !important;
+    }
+  }
+}
+
+@media #{$tablet} {
+  a{
+    padding-left: $paddingDefault * 4;
+  }
+
+  .container {
+    margin: 15vh auto;
+
+    .card p{
+      margin: 4rem auto !important;
+    }
+  }
+}
+
+@media #{$laptop} {
+  a{
+    padding-left: $paddingDefault * 8;
+  }
+
+  .container {
+    margin: 15vh auto;
+
+    .card p{
+      margin: 4rem auto !important;
+    }
+  }
+}
+
+@media #{$desktop} {
+  a{
+    padding-left: $paddingDefault * 30;
+  }
+
+  .container {
+    margin: 15vh auto;
+
+    .card p{
+      margin: 4rem auto !important;
+    }
+  }
+}
+
+@media #{$largeDesktop} {
+  a{
+    padding-left: $paddingDefault * 50;
+  }
+
+  .container{
+    margin: 15vh auto;
+
+    .card p{
+      margin: 4rem auto !important;
+    }
+  }
+}
+
+
+
+
+
 @import "../node_modules/bootstrap/scss/bootstrap";
