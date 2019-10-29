@@ -4,7 +4,7 @@ $fontSz: 1rem;
 $padding: 0;
 $primaryColor: #ff0500;
 $paddingDefault: 0.5rem;
-$fontstyle: helvetica;
+$fontStyle: helvetica;
 $shadows: text-shadow 2px 2px #ff0000;
 $fontSz: font-size 80px;
 $phone: "screen and (min-width: 576px)";
@@ -48,7 +48,7 @@ body{
 
   .navbar{
     padding: $paddingDefault;
-    font-family: $fontstyle;
+    font-family: $fontStyle;
     text-shadow: $shadows;
     background: $primaryColor;
 
@@ -59,13 +59,14 @@ body{
     padding-top: $paddingDefault * 20;
     padding-bottom: $paddingDefault * 8;
     padding-left: $paddingDefault * 50;
-    font-family: $fontstyle;
+    font-family: $fontStyle;
     text-shadow: $shadows;
 
   }
 
   .p{
     font-size: $fontSz;
+    font-family: $fontStyle;
     @include shadows;
   }
 
