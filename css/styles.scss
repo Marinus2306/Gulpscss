@@ -3,15 +3,72 @@ $text: #333333;
 $fontSz: 1rem;
 $padding: 0;
 $primaryColor: #ff0500;
+$paddingDefault: 0.5rem;
+$fontstyle: helvetica;
+$shadows: text-shadow 2px 2px #ff0000;
+$fontSz: font-size 80px;
 
+@mixin blurText($blur: 5px){
+  color: transparent;
+  text-shadow: 0 0 $blur, rgba(0,0,0,0.5);
+
+}
+
+@mixin bgColor(){
+  background-color: $bgColor;
+}
+
+@mixin primaryColor(){
+  background-color: $primaryColor;
+}
+
+@mixin shadows(){
+  text-shadow: 2px 2px #ff0000;
+}
+
+@mixin flex(){
+  flex: 0 0 50%;
+  max-width: 50%;
+}
 
 
 body{
-  background-color: $primary;
+
+  @include primaryColor;
+  background-color: $bgColor;
   user-select: none;
   display: grid;
+
+  .nav{
+    padding: $paddingDefault;
+    font-family: $fontstyle;
+    text-shadow: $shadows;
+
+
+
+  }
+  .container{
+    padding-top: $paddingDefault * 20;
+    padding-bottom: $paddingDefault * 8;
+    padding-left: $paddingDefault * 50;
+    font-family: $fontstyle;
+    text-shadow: $shadows;
+
+  }
+
+  .p{
+    font-size: $fontSz;
+    @include shadows;
+  }
+
+
 
 
 }
 
+#card-body{
+
+
+
+}
 @import "../node_modules/bootstrap/scss/bootstrap";
